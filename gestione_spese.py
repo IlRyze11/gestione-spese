@@ -17,7 +17,7 @@ st.markdown("""
         .main .block-container { padding: 1rem; }
     }
     </style>
-    """, unsafe_allow_stdio=True)
+    """, unsafe_allow_html=True) # <--- Sostituito con unsafe_allow_html
 
 @st.cache_resource(ttl=60)
 def connetti_google_sheet():
@@ -175,3 +175,4 @@ if not df.empty:
                 st.rerun()
 else:
     st.info("Aggiungi il tuo primo movimento dalla barra laterale!")
+
